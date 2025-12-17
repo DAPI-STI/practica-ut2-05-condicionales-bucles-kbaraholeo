@@ -6,10 +6,16 @@ Determina si un año es bisiesto (reglas típicas).
 def is_leap_year(year: int) -> bool:
     """
     Devuelve True si el año es bisiesto, False en caso contrario.
+    año bisiesto=366 días, año común=365 días.
 
     Reglas:
     - Un año es bisiesto si es divisible por 4
     - Excepto si es divisible por 100
     - Pero sí es bisiesto si es divisible por 400
     """
-    raise NotImplementedError("Implementa is_leap_year(year)")
+    if year % 4 == 0 and year % 100 == 0 and year % 400 == 0:
+        return True
+    elif year % 4 == 0 and year % 100 != 0:
+        return True
+    else:
+        return False
