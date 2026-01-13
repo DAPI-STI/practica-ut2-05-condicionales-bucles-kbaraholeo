@@ -14,4 +14,18 @@ def fizzbuzz(n: int) -> list[str]:
 
     Si n <= 0, devuelve lista vacía.
     """
+    l=[]
+    if n <= 0:
+        return l
+    for i in range(1, n + 1):
+        if i % 3 == 0 and i % 5 == 0:
+            l.append("FizzBuzz")
+        elif i % 3 == 0:
+            l.append("Fizz")
+        elif i % 5 == 0:
+            l.append("Buzz")
+        else:
+            l.append(str(i))
+    return l
     raise NotImplementedError("Implementa fizzbuzz(n)")
+
